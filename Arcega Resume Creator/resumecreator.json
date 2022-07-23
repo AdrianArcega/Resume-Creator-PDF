@@ -1,4 +1,6 @@
-  "Fullname": "ADRIAN A. ARCEGA",
+ {
+  "firstname": "ADRIAN",
+  "lasttname": "ADRIAN",
   "Profile": "A highly cooperative, easy to adapt employee that is reliable",
   "Profile1": "to any computer related job. Always strives for success of his team",
   "Profile2": "Open for learning new skills and ensures to complete a high-quality job.",
@@ -27,3 +29,4 @@
   "Address": "Brgy. FM 101.9, Quezon City",
   "Birth": "September 30, 2003",
   "Citizenship": "Filipino"
+}
