@@ -95,7 +95,7 @@ namespace Arcega_Resume_Creator
          using (SaveFileDialog fileDialog = new SaveFileDialog())
             {
                 fileDialog.InitialDirectory = @"C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator";
-                fileDialog.FileName = lastname + "" + firstname + ".pdf";
+                fileDialog.FileName = lastname + "_" + firstname + ".pdf";
                 fileDialog.Filter = "PDF|*.pdf";
                 if (fileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -104,14 +104,17 @@ namespace Arcega_Resume_Creator
                     PdfPage pdfpage = pdfDocument.AddPage(); 
 
                     XGraphics xgraphics = XGraphics.FromPdfPage(pdfpage);
-
+                    //Font size
                     XFont largeFont = new XFont(" ", 18, XFontStyle.Bold);
                     XFont mediumFont = new XFont(" ", 16, XFontStyle.Bold);
                     XFont smallFont = new XFont(" ", 12, XFontStyle.Regular);
-                    XFont nameFont = new XFont(" ", 20, XFontStyle.Bold);
-
-                    int leftmargin = 30;
-
+                    XFont nameFont = new XFont(" ", 13, XFontStyle.Bold);
+                    //Margin
+                    int leftmargin = 27;
+                    //Design
+                    xgraphics.DrawRectangle(XBrushes.LightGray, 0, 0, pdfpage.Width.Point, pdfpage.Height.Point);
+                    xgraphics.DrawRectangle(XBrushes.WhiteSmoke, 200, 0, pdfpage.Width.Point, pdfpage.Height.Point);
+                    //Resume Picture
                     string pic = @"C:\Users\acer\Desktop\Adrian\Resume Generator\resumepic.png";
                     XImage respic = XImage.FromFile(pic);
                     xgraphics.DrawImage(respic, leftmargin, 50, 150, 150);
