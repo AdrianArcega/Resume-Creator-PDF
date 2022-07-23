@@ -16,5 +16,10 @@ namespace Arcega_Resume_Creator
         {
             InitializeComponent();
         }
+
+        private void btnGenerateClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\bin\Debug\Arcega Resume Creator.exe.config
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\bin\Debug\Arcega Resume Creator.exe
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\bin\Debug\Arcega Resume Creator.pdb
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\obj\Debug\Arcega Resume Creator.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\obj\Debug\Arcega Resume Creator.csproj.SuggestedBindingRedirects.cache
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\obj\Debug\Arcega_Resume_Creator.Form1.resources
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\obj\Debug\Arcega_Resume_Creator.Properties.Resources.resources
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\obj\Debug\Arcega Resume Creator.csproj.GenerateResource.cache
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\obj\Debug\Arcega Resume Creator.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\obj\Debug\Arcega Resume Creator.exe
+C:\Users\acer\source\repos\Arcega Resume Creator\Arcega Resume Creator\obj\Debug\Arcega Resume Creator.pdb
