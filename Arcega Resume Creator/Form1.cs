@@ -101,7 +101,24 @@ namespace Arcega_Resume_Creator
                 {
                     PdfDocument pdfDocument = new PdfDocument();
                     pdfDocument.Info.Title = lastname + "_" + firstname + "Resume";
-                    PdfPage page = pdfDocument.AddPage(); 
+                    PdfPage pdfpage = pdfDocument.AddPage(); 
+
+                    XGraphics xgraphics = XGraphics.FromPdfPage(pdfpage);
+
+                    XFont largeFont = new XFont(" ", 18, XFontStyle.Bold);
+                    XFont mediumFont = new XFont(" ", 16, XFontStyle.Bold);
+                    XFont smallFont = new XFont(" ", 12, XFontStyle.Regular);
+                    XFont nameFont = new XFont(" ", 20, XFontStyle.Bold);
+
+                    int leftmargin = 30;
+
+                    string pic = @"C:\Users\acer\Desktop\Adrian\Resume Generator\resumepic.png";
+                    XImage respic = XImage.FromFile(pic);
+                    xgraphics.DrawImage(respic, leftmargin, 50, 150, 150);
+
+                    pdfDocument.Save(fileDialog.FileName);
+                    MessageBox.Show("Thank you!");
+                    this.Close();
                 }
             }
 
