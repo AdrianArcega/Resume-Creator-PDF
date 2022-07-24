@@ -105,20 +105,70 @@ namespace Arcega_Resume_Creator
 
                     XGraphics xgraphics = XGraphics.FromPdfPage(pdfpage);
                     //Font size
-                    XFont largeFont = new XFont(" ", 18, XFontStyle.Bold);
-                    XFont mediumFont = new XFont(" ", 16, XFontStyle.Bold);
+                    XFont largeFont = new XFont(" ", 18, XFontStyle.Regular);
+                    XFont largeFont1 = new XFont(" ", 18, XFontStyle.Bold);
+                    XFont mediumFont = new XFont(" ", 16, XFontStyle.Regular);
+                    XFont mediumFont1 = new XFont(" ", 16, XFontStyle.Bold);
                     XFont smallFont = new XFont(" ", 12, XFontStyle.Regular);
-                    XFont nameFont = new XFont(" ", 13, XFontStyle.Bold);
+                    XFont smallFont1 = new XFont(" ", 12, XFontStyle.Bold);
+
                     //Margin
-                    int leftmargin = 27;
+                    int leftmargin = 25;
+                    int leftinitial = 200;
+                    int middlemargin = 220;
+                    int middleinitial = 200;
+
                     //Design
                     xgraphics.DrawRectangle(XBrushes.LightGray, 0, 0, pdfpage.Width.Point, pdfpage.Height.Point);
                     xgraphics.DrawRectangle(XBrushes.WhiteSmoke, 200, 0, pdfpage.Width.Point, pdfpage.Height.Point);
                     //Resume Picture
                     string pic = @"C:\Users\acer\Desktop\Adrian\Resume Generator\resumepic.png";
                     XImage respic = XImage.FromFile(pic);
-                    xgraphics.DrawImage(respic, leftmargin, 50, 150, 150);
+                    xgraphics.DrawImage(respic, leftmargin, 52, 150, 150);
+                    //Name
+                    xgraphics.DrawString(firstname + " " + lastname, largeFont, XBrushes.Black, new XRect(leftmargin , leftinitial + 10, pdfpage.Width.Point, pdfpage.Height.Point + 30), XStringFormats.TopLeft);
+                    //Contacts
+                    xgraphics.DrawString("Contact Info", mediumFont1, XBrushes.Black, new XRect(leftmargin, leftinitial + 60, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Email, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 90, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Number, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 110, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Address, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 130, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(githubacc, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 150, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
 
+                    //Hard Skills
+                    xgraphics.DrawString("Hard Skills", mediumFont1, XBrushes.Black, new XRect(leftmargin, leftinitial + 200, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(skill5, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 220, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(skill6, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 240, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(skill7, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 260, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(skill8, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 280, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+
+                    //Soft Skills
+                    xgraphics.DrawString("Soft Skills", mediumFont1, XBrushes.Black, new XRect(leftmargin, leftinitial + 330, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(skill, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 360, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(skill1, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 380, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(skill2, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 400, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(skill3, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 420, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(skill4, smallFont, XBrushes.Black, new XRect(leftmargin, leftinitial + 440, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+
+                    //Profile
+                    xgraphics.DrawString("Profile", largeFont1, XBrushes.Black, new XRect(middlemargin + 170, middleinitial - 120, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Profile, smallFont, XBrushes.Black, new XRect(middlemargin, middleinitial - 85, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Profile1, smallFont, XBrushes.Black, new XRect(middlemargin, middleinitial - 70, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Profile2, smallFont, XBrushes.Black, new XRect(middlemargin, middleinitial - 55, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+
+                    //Education History
+                    xgraphics.DrawString("Education History", largeFont1, XBrushes.Black, new XRect(middlemargin + 120, middleinitial + 20, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString("Tertiary Education", largeFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 60, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Tertiary, smallFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 80, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Tertiary1, smallFont, XBrushes.Black, new XRect(middlemargin, middleinitial + 100, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString("Secondary Education", largeFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 140, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString("Senior High School", mediumFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 170, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Secondary, smallFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 190, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Secondary1, smallFont, XBrushes.Black, new XRect(middlemargin, middleinitial + 210, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString("Junior High School", mediumFont1, XBrushes.Black, new XRect(middlemargin, middleinitial +240, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Secondary2, smallFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 260, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Secondary3, smallFont, XBrushes.Black, new XRect(middlemargin, middleinitial + 280, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString("Primary Education", mediumFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 310, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Primary, smallFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 320, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
                     pdfDocument.Save(fileDialog.FileName);
                     MessageBox.Show("Thank you!");
                     this.Close();
