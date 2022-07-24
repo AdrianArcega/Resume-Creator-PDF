@@ -168,7 +168,7 @@ namespace Arcega_Resume_Creator
                     xgraphics.DrawString(Secondary2, smallFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 260, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
                     xgraphics.DrawString(Secondary3, smallFont, XBrushes.Black, new XRect(middlemargin, middleinitial + 280, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
                     xgraphics.DrawString("Primary Education", mediumFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 310, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
-                    xgraphics.DrawString(Primary, smallFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 320, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
+                    xgraphics.DrawString(Primary, smallFont1, XBrushes.Black, new XRect(middlemargin, middleinitial + 330, pdfpage.Width.Point, pdfpage.Height.Point), XStringFormats.TopLeft);
                     pdfDocument.Save(fileDialog.FileName);
                     MessageBox.Show("Thank you!");
                     this.Close();
